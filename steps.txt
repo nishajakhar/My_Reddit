@@ -1,0 +1,24 @@
+Step 1 : Add tsconfig file : 
+    Run this command. npx tsconfig.json. 
+    It will add this file to directory for typescript compiler configurations
+
+Step 1 : Add scripts to package.json : 
+    watch script : use tsc command to compile typescript code continuosly. 
+    start script : use node to start server from dist/index.js file
+    dev script :  use nodemon to start server on auto restart on save mode from dist/index.js file.
+
+Step 2 : MikroORM Setup 
+    Add below packages for Mikro-ORM Setup with Postgres database : @mikro-orm/cli @mikro-orm/core @mikro-orm/postgresql @mikro-orm/migrations pg
+    Call the init() of mikroOrm core in index.ts file and pass arguments such as dbName, host, port, type, entities, etc.
+
+Step 3 : Define entities
+    TypeGraphQL works well with classes. So create entities file based on class and objects. e.g(entities/user.ts)
+
+Step 4 : Migrations for defined entities
+    Add mikro-orm.config.ts file which will have properties same as init() plus a migration property
+    Add migrations config to package.json file
+    Run npx mikro-orm migration:create
+    Instead of manually running migrations we can specify in our code to run migrations automatically by doing orm.getMigrator().up()
+
+Step 5 : 
+    
