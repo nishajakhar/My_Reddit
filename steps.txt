@@ -20,5 +20,14 @@ Step 4 : Migrations for defined entities
     Run npx mikro-orm migration:create
     Instead of manually running migrations we can specify in our code to run migrations automatically by doing orm.getMigrator().up()
 
-Step 5 : 
-    
+Step 5 : Initate express and apollo server
+    Add express and listen the server
+    Create new instance of apollo server and pass all resolvers(routes) to it.
+    Create new resolvers e.g resolvers/hello.ts
+    Pass express app as Middleware to apollo server
+
+Step 6 : Create Post Resolvers 
+    Expose fields to graphql in entities file. Set Table as ObjectType if returning that type from resolver
+    Create CRUD Queries in resolver file
+    Pass Mikro orm connection object to context property of apollo server to retrieve into resolvers for doing database queries
+
