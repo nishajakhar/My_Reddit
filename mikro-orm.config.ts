@@ -16,8 +16,3 @@ export default {
   type: process.env.MIKRO_ORM_TYPE,
   debug: false,
 } as Parameters<typeof MikroORM.init>[0];
-
-let main = () => {
-  console.log('I am hereee', process.env.MIKRO_ORM_DATABASE);
-};
-main();

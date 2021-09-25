@@ -31,3 +31,8 @@ Step 6 : Create Post Resolvers
     Create CRUD Queries in resolver file
     Pass Mikro orm connection object to context property of apollo server to retrieve into resolvers for doing database queries
 
+Step 7 : Create Authentication routes
+    Create User entity and then create migrations for it. 
+    To disselect password from all graphql query then dont append Field decorator to it.
+    Create Register and Login Resolvers.
+    Use Argon2 for password encrytion.
